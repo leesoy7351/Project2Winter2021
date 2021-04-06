@@ -142,7 +142,6 @@ def get_site_instance(site_url, cache):
 
     soup_site = BeautifulSoup(response_site_detail, 'html.parser')
 
-    park_detail_1 = soup_site.find('div', class_='Hero-titleContainer clearfix')
     # name
     park_name = soup_site.find('a', class_='Hero-title').text
     # type
