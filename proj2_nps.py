@@ -130,11 +130,11 @@ def get_site_instance(site_url, cache):
     instance
         a national site instance
     '''
-    if (site_url in cache.keys()): # michigan total # site_url = park_site_url
+    if (site_url in cache.keys()): 
         response_site_detail = cache[site_url]
         print('Using cache')
     else:
-        response_sit_detail = requests.get(site_url) # go to each site
+        response_sit_detail = requests.get(site_url) 
         cache[site_url] = response_sit_detail.text
         print('Fetching')
         save_cache(cache)
